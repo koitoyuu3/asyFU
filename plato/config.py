@@ -126,6 +126,7 @@ class Config:
 
             yaml.add_constructor("!include", Config.construct_include, Loader)
 
+            filename = "knot_mnist_lenet5.yml"
             if os.path.isfile(filename):
                 with open(filename, "r", encoding="utf-8") as config_file:
                     config = yaml.load(config_file, Loader)
